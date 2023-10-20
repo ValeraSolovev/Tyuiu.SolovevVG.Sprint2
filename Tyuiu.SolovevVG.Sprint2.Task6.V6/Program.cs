@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tyuiu.SolovevVG.Sprint2.Task5.V7.Lib;
+using Tyuiu.SolovevVG.Sprint2.Task6.V6.Lib;
 
-namespace Tyuiu.SolovevVG.Sprint2.Task5.V7
+
+namespace Tyuiu.SolovevVG.Sprint2.Task6.V6
 {
     class Program
     {
@@ -28,16 +29,18 @@ namespace Tyuiu.SolovevVG.Sprint2.Task5.V7
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
-            int y = 1990, n;
+            Console.Write("Введите номер масти: ");
+            int m = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Введите кол-во прошедших месяцев:");
-            n = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите номер достоинства карты: ");
+            int k = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
-            var s = ds.FindMonthName(y, n);
-            Console.WriteLine("Сейчас " + s);
+
+            Console.WriteLine($"Полное название - {ds.FindCardNameAndValue(m, k)}");
+
             Console.ReadKey();
         }
     }
